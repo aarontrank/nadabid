@@ -1,0 +1,138 @@
+body {
+	background: transparent url(../images/bg.gif) repeat scroll top left;
+	margin: 0pt;	
+}
+
+div.about_body {
+	font-family: georgia; 
+}
+	
+a {
+	color: #3252B2;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+img {
+	border: none;	
+}
+
+table.main_table {
+	width:940px; 
+	background-color: white; 
+	margin-top: 15px;
+}
+
+div.resultDiv {
+	width: 790px;
+	margin-left:10px;
+}
+
+div.search_bar{
+	width: 906px;
+	padding: 5px;
+	background: transparent url(../images/bg.gif) repeat scroll top left;
+	border: 2px;
+	border-style: solid;
+	border-color: black;
+}
+
+div.result_bar{
+	width: 776px;
+	padding: 5px;
+	background: transparent url(../images/bg.gif) repeat scroll top left;
+	border: 2px;
+	border-style: solid;
+	border-color: black;
+	visibility: hidden;
+	margin-left:10px;
+}
+
+div.inner_content{
+	margin-top: 5px;
+}
+
+div.footer {
+	margin-top:10px;	
+}
+
+div.content {
+	margin-top: 0px;
+	margin-left: 10px;	
+}
+
+div.linkbar {
+	margin-right: 10px; 
+	font-family: georgia; 
+	font-size: 12px;
+}
+
+div.linkbar a.image {
+	text-decoration: none;	
+}
+
+div.top_hr {
+	margin-left: 175px;
+}
+
+div.point {
+	margin-left: 25px;
+}
+
+div.point_body {
+	margin-left: 25px; 
+	width: 700px;
+}
+
+h2.point_catchline {
+	font-family: georgia; 
+	font-size: 18px; 
+	line-height: 0em;
+}
+
+span.point_body {
+	margin-left: 25px; 
+	font-family: georgia; 
+	font-size: 16px; 
+	line-height: 1.4em;
+}
+
+li.future_feature {
+	color: red;
+}
+
+img.logo {
+	margin-left: 10px; 
+	margin-top: 0px;
+}
+
+img.jumptopage {
+	margin-left: 5px;
+	margin-right: 5px;	
+}
+
+span.slogan {
+
+	font-family: georgia; 
+	font-weight:bold;
+	font-size: 14px; 
+	line-height: 1.4em;
+	margin-left: 20px;
+}
+
+div.slogan {
+	margin-left: 398px; 
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+h2.copyright {
+	font-family: georgia;
+	font-size: 18px;
+	line-height: 1.4em;
+	color:white;
+}
+
+span.currentPageSpan {
+	font-weight: bold;
+}

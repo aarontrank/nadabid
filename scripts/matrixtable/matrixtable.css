@@ -1,0 +1,27 @@
+table.MatrixTable {
+	border:0px solid #000000;
+	border-spacing:0.1em;
+	width:100%;
+	margin:2px;
+	font-size:small
+}
+
+table.MatrixTable tbody tr.MatrixTableRow {
+ 	height: 2em;
+}
+
+table.MatrixTable tbody tr td.MatrixTableCell {
+	border-bottom: 0px solid grey;
+}
+
+table.MatrixTable thead.MatrixTableHeader {
+	
+}
+table.MatrixTable thead tr.MatrixTableHeadRow {
+	height: 2em;
+}
+
+table.MatrixTable thead tr td.MatrixTableHeaderCell {
+	font-size:small;
+	font-weight:700;
+}
