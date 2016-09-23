@@ -90,5 +90,4 @@ app.get("/api/v0.1/finditems/:search", (request,response)=>{
     response.send({items:parseSearchResult(JSON.parse(body)), search:search});
   });
 });
-
-httpServer.listen(8765);
+httpServer.listen(process.env.PORT || 5000);
