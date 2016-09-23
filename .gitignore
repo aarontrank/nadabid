@@ -4,3 +4,7 @@ node_modules
 .DS_Store
 #Ignore cached files
 *~
+#Ignore Art
+art
+#Ignore www
+www

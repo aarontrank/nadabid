@@ -1,4 +1,4 @@
 # nadabid
-Single page ebay search application - Circa 2007 - as seen at http://www.nadabid.aarontrank.com
+Single page ebay search application for items that haven't been bid on.  Originally developed in 2007 in PHP and JavaScript.  Redeveloped in 2016 on nodejs, express, socket.io, and ejs.
 
-This site hasn't been updated since 2009.
+Visit: http://www.nadabid.com
