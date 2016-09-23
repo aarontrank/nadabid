@@ -1,0 +1,136 @@
+{
+  "itemId": [
+    "252536565744"
+  ],
+  "title": [
+    "HELLO KITTY TOTE BAG PURSE BOOK BAG"
+  ],
+  "globalId": [
+    "EBAY-US"
+  ],
+  "primaryCategory": [
+    {
+      "categoryId": [
+        "39568"
+      ],
+      "categoryName": [
+        "Other Hello Kitty"
+      ]
+    }
+  ],
+  "galleryURL": [
+    "http://thumbs1.ebaystatic.com/m/mj6jGe6IfZ1D8sR86NTthRw/140.jpg"
+  ],
+  "viewItemURL": [
+    "http://www.ebay.com/itm/HELLO-KITTY-TOTE-BAG-PURSE-BOOK-BAG-/252536565744"
+  ],
+  "paymentMethod": [
+    "PayPal"
+  ],
+  "autoPay": [
+    "false"
+  ],
+  "postalCode": [
+    "91303"
+  ],
+  "location": [
+    "Canoga Park,CA,USA"
+  ],
+  "country": [
+    "US"
+  ],
+  "shippingInfo": [
+    {
+      "shippingServiceCost": [
+        {
+          "@currencyId": "USD",
+          "__value__": "7.0"
+        }
+      ],
+      "shippingType": [
+        "Flat"
+      ],
+      "shipToLocations": [
+        "US"
+      ],
+      "expeditedShipping": [
+        "false"
+      ],
+      "oneDayShippingAvailable": [
+        "false"
+      ],
+      "handlingTime": [
+        "2"
+      ]
+    }
+  ],
+  "sellingStatus": [
+    {
+      "currentPrice": [
+        {
+          "@currencyId": "USD",
+          "__value__": "5.0"
+        }
+      ],
+      "convertedCurrentPrice": [
+        {
+          "@currencyId": "USD",
+          "__value__": "5.0"
+        }
+      ],
+      "bidCount": [
+        "0"
+      ],
+      "sellingState": [
+        "Active"
+      ],
+      "timeLeft": [
+        "P0DT0H0M54S"
+      ]
+    }
+  ],
+  "listingInfo": [
+    {
+      "bestOfferEnabled": [
+        "false"
+      ],
+      "buyItNowAvailable": [
+        "false"
+      ],
+      "startTime": [
+        "2016-09-12T16:06:45.000Z"
+      ],
+      "endTime": [
+        "2016-09-22T16:06:45.000Z"
+      ],
+      "listingType": [
+        "Auction"
+      ],
+      "gift": [
+        "false"
+      ]
+    }
+  ],
+  "returnsAccepted": [
+    "false"
+  ],
+  "galleryPlusPictureURL": [
+    "http://galleryplus.ebayimg.com/ws/web/252536565744_1_0_1.jpg"
+  ],
+  "condition": [
+    {
+      "conditionId": [
+        "3000"
+      ],
+      "conditionDisplayName": [
+        "Used"
+      ]
+    }
+  ],
+  "isMultiVariationListing": [
+    "false"
+  ],
+  "topRatedListing": [
+    "false"
+  ]
+}

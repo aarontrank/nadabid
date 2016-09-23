@@ -1,0 +1,112 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div id="main-container" class="container-fluid main-container">
+          <div id="nadabid">
+            <div class="jumbotron">
+              <!-- Go to www.addthis.com/dashboard to customize your tools -->
+              <div class="addthis_inline_share_toolbox"></div>
+              <h2>Now you can build a search app too with our handy API!</h2>
+              <p>API's are fun.  You can get a JSON object containing search results by calling the following:</p>
+              <pre>http://www.nadabid.com/api/v0.1/finditems/{Your Seach Term}</pre>
+              <p>The resultant JSON object is as follows:</p>
+              <pre>
+{
+  items : {
+    title : Item Title,
+    img: URL to Image,
+    url: Ebay URL,
+    price: Current Price,
+    shippingType: Shipping Type (See Various Shipping Types Below),
+    shippingPrice: Shipping Price,
+    timeLeft: Simplified duration of time left
+  },
+  search : searchTerm
+}
+<span style="color:orange">
+price formats: XX.XX
+
+timeLeft format:  XdXhXmXs
+                  XhXmXs
+                  XmXs
+                  Xs (depending how much time is left)
+
+Shipping Types:   Calculated
+                  CalculatedDomesticFlatInternational
+                  Flat
+                  FlatDomesticCalculatedInternational
+                  Free
+                  FreePickup
+                  Freight
+                  FreightFlat
+                  NotSpecified
+</span>
+              </pre>
+            </div>
+            <div class="col-xs-12">
+              <hr>
+              <p>
+                <img style="float:left; padding-right:25px;" src="../../img/aaron.png">
+                <h3>Contact Aaron</h3>
+                <h4><a href="https://twitter.com/aarontrank">Twitter</a></h4>
+                <h4><a href="https://github.com/aarontrank/">Github</a></h4>
+                <h4><a href="http://medium.com/@aarontrank">Medium</a></h4>
+                <h4><a href="http://linkedin.com/in/aarontrank">LinkedIn</a></h4>
+                <h4><a href="http://trank.org">Website</a></h4>
+              </p>
+            </div>
+            <div class="col-xs-12">
+              <hr>
+              <h4>This site is completely free to use.  See disclaimer below.</h4>
+              <small>NO WARRANTIES. AARON TRANK HEREBY DISCLAIMS ALL WARRANTIES. AARON TRANK IS MAKING THE SITE AVAILABLE "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU ASSUME THE RISK OF ANY AND ALL DAMAGE OR LOSS FROM USE OF, OR INABILITY TO USE, THE SITE OR THE SERVICE. TO THE MAXIMUM EXTENT PERMITTED BY LAW, AARON TRANK EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE SITE, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. AARON TRANK DOES NOT WARRANT THAT THE SITE OR THE SERVICE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE SITE OR THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE.</small>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57e55aa3a7e54542"></script>
+<script src="../../js/socket.io.js"></script>
+<script>
+  var socket = io('http://localhost:8765');
+
+  function search(){
+    var searchField = document.getElementById('searchbar');
+    var searchTerm = searchField.value;
+    socket.emit('search',searchTerm);
+    //searchField.value='';
+    searchField.focus();
+  }
+
+  socket.on('search-response',(data)=>{
+    if (data) {
+      var mainContainer = document.getElementById('main-container');
+      mainContainer.innerHTML = data;
+    }
+  });
+
+</script>
+</body>
+</html>

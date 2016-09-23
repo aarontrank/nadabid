@@ -1,0 +1,55 @@
+<div id="nadabid">
+<%
+  if (items) {
+  items.forEach((item)=>{%>
+  <div class="col-md-3 col-sm-4 col-xs-6 item-container">
+    <a href="<%= item.url %>">
+    <div class="item">
+      <div><img class="img-responsive item-img" src="<%= item.img %>"></div>
+      <hr>
+      <p class="item-title">
+        <span><%= item.title %></span>
+      </p>
+      <p>
+          <div>
+            <div><span class="glyphicon glyphicon-time" aria-hidden="true" style="margin-left:5px;"></span>: <%= item.timeLeft%></div>
+            <div style="float:right;"><span class="glyphicon glyphicon-usd" aria-hidden="true" style="font-weight:bold;"></span><span style="color:green; margin-right:5px; font-weight:bold;"><%= item.price%></span></div>
+          </div>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-left:5px;"></span><span style="color:light-blue;">: $<%= item.shippingPrice%></span>
+      </p>
+  </div>
+</a>
+</div>
+<%});
+} else {%>
+  <div class="jumbotron">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox"></div>
+    <h2>Welcome to Nadabid.com<h2><img style="float:left; padding-right:25px;" src="../../img/loading.gif">
+    <p>Nadabid is a site where you can search for items on ebay that have zero bids.  Use this site to find the hidden auctions and bargain deals on ebay.  Start by typing a search term into the search bar above... The results will include a corresponding gallery of the 100 soonest ending auctions with ZERO bids.  Each gallery listing includes the amount of time left, the shipping price, and the starting bid.  Click on an item to visit the listing on Ebay.  Once an item has been "bid on" it will no longer be "findable" using this site.  If you'd rather build your own Ebay search application, checkout the API by clicking the button below!</p>
+    <p style="margin-bottom:-25px;"><a class="btn btn-lg btn-success center-block" style="max-width:180px;" href="/api" role="button">the spiffy API...</a></p>
+  </div>
+  <div class="col-xs-12">
+    <h3>The year was 2007...</h3>
+    <p>I was working at NASA's Jet Propulsion Laboratory as a software engineer on the "Middleware" team responsible for developing the "ground data system" for the Curiosity rover.  I was asked to build a data visualization tool, but I didn't want to build it in Java and SWT... The end users of the visualization tool could be on any and every imaginable OS platform and I wanted a single solution I could build and not worry about targeting multiple OS's.  I'd done a bit of Javascript with AJAX before, and I wondered if I could build an API with a Java backend to collect info from the Messaging server, transform it to JSON, and serve it via the web.  On the front end I'd connect w/ AJAX long polling and utilize Javascript DOM manipulation to render the new data within the page.  It was an experiment and some of my coworkers chuckled that I'd willingly take on a project in JavaScript.  I hadn't built an JavaScript/AJAX app for processing significant volumes of JSON before, so I looked for a publibly available (and free) API that could return a large JSON object... I wanted to write a "practice" app to see if the browser could even handle the data.  Hence Nadabid was born!</p>
+    <img class="img-responsive" style="padding-top: 25px; padding-bottom:25px;" title="Nadabid circa 2007 courtesy of Archive.org" src="../../img/nadabid2007.png">
+    <h3>Fast forward to 2016...</h3>
+    <p>A big jump forward, I know.  JavaScript is no longer the ugly stepchild.  WebSockets have replaced long polling (praise the Lord on High).  Several rather brilliant folks have made things in JavaScript land soooooooooo much better.  Big shoutout to <a href="crockford.com">Douglas Crockford</a>, <a href="http://tinyclouds.org/">Ryan Dahl</a>, <a href="http://izs.me/">Isaac Schlueter</a>, and <a href="https://github.com/tj">TJ Holowaychuk</a> (to name just a few).  So I decided to rewrite Nadabid from the ground up.  Nadabid is currently running on NodeJS w/ Express.  It uses EJS for templating.  It uses Socket.io for getting data from the server.  It uses Bootstrap and JQuery on the front end.  I'll try to update this list as it continues to evolve.  The full code of Nadabid.com is available over on <a href="https://github.com/aarontrank/nadabid">GitHub</a></p>
+    <hr>
+    <p>
+      <img style="float:left; padding-right:25px;" src="../../img/aaron.png">
+      <h3>Contact Aaron</h3>
+      <h4><a href="https://twitter.com/aarontrank">Twitter</a></h4>
+      <h4><a href="https://github.com/aarontrank/">Github</a></h4>
+      <h4><a href="http://medium.com/@aarontrank">Medium</a></h4>
+      <h4><a href="http://linkedin.com/in/aarontrank">LinkedIn</a></h4>
+      <h4><a href="http://trank.org">Website</a></h4>
+    </p>
+  </div>
+  <div class="col-xs-12">
+    <hr>
+    <h4>This site is completely free to use.  See disclaimer below.</h4>
+    <small>NO WARRANTIES. AARON TRANK HEREBY DISCLAIMS ALL WARRANTIES. AARON TRANK IS MAKING THE SITE AVAILABLE "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU ASSUME THE RISK OF ANY AND ALL DAMAGE OR LOSS FROM USE OF, OR INABILITY TO USE, THE SITE OR THE SERVICE. TO THE MAXIMUM EXTENT PERMITTED BY LAW, AARON TRANK EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE SITE, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. AARON TRANK DOES NOT WARRANT THAT THE SITE OR THE SERVICE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE SITE OR THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE.</small>
+  </div>
+<%}%>
+</div>
