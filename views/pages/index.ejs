@@ -32,7 +32,7 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57e55aa3a7e54542"></script>
 <script src="../../js/socket.io.js"></script>
 <script>
-  var socket = io();
+  /*var socket = io();
 
   function search(){
     var searchField = document.getElementById('searchbar');
@@ -40,6 +40,7 @@
     socket.emit('search',searchTerm);
     //searchField.value='';
     searchField.focus();
+    return false;
   }
 
   socket.on('search-response',(data)=>{
@@ -47,7 +48,26 @@
       var mainContainer = document.getElementById('main-container');
       mainContainer.innerHTML = data;
     }
-  });
+  });*/
+
+  /*$(document).ready(function () {
+    /*$('#searchbar').on('change', function(e) {
+        //$('#search-form').action = '/' + $('#searchbar').value;
+        //$("#search-form").change(function() {
+          var action = $('#searchbar').val();
+          $("#search-form").attr("action", "/MickeyMouse" + action);
+          alert("hello");
+        //});
+
+    });*/
+    /*$("#search-form").submit(function (e) {
+		    //e.preventDefault();
+        var action = $('#searchbar').val();
+        $("#search-form").attr("action", "/MickeyMouse" + action);
+        //$("search-form").submit();
+        //jQuery.get("/" + $('#searchbar').val());
+	  });
+  });*/
 
 </script>
 <script>

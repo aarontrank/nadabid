@@ -6,11 +6,11 @@
       <a class="navbar-brand" href="http://www.nadabid.com"><img src="../../img/nadabid.png"></a>
     </div>
     <div id="navbar" class="col-xs-12 col-sm-5">
-      <form class="navbar-form navbar-right" onsubmit="search(); return false;">
+      <form class="navbar-form navbar-right" method="get" id="search-form" action="/">
         <div style="white-space: nowrap;" class="form-group">
-          <button style="float:right;" type="submit" class="btn"><span class="glyphicon glyphicon-search" aria-hidden="true" ></span></button>
+          <button style="float:right;" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true" ></span></button>
           <div style="overflow:hidden;">
-          <input style="width:100%;" type="text" placeholder="Search..." class="form-control" autofocus="true" id="searchbar">
+          <input style="width:100%;" type="text" placeholder="Search..." value="<%= search %>" class="form-control" name="search" autofocus="true" id="searchbar">
           </div>
         </div>
       </form>
